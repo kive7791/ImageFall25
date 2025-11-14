@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
-  </head>
-  <body>
+    <script
+        src="https://unpkg.com/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
+</head>
+
+<body>
     <a-scene>
-      <a-entity
-        particle-system="
+        <a-entity particle-system="
           preset: rain;
           color: #a000ff;
           particleCount: 1000;
           size: 0.2;
           opacity: 0.9;
           velocityValue: 0 -5 0;">
-      </a-entity>
+        </a-entity>
 
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" color="#111"></a-plane>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" color="#111"></a-plane>
 
-      <a-entity position="0 1.6 0">
-        <a-camera></a-camera>
-      </a-entity>
+        <a-entity position="0 1.6 0">
+            <a-camera></a-camera>
+        </a-entity>
     </a-scene>
-  </body>
+</body>
+
 </html>
