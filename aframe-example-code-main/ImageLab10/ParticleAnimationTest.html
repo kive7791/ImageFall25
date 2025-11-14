@@ -12,10 +12,12 @@
         <a-entity particle-system="
           preset: rain;
           color: #a000ff;
-          particleCount: 1000;
-          size: 0.2;
+          particleCount: 200;
+          size: 0.1;
           opacity: 0.9;
-          velocityValue: 0 -5 0;">
+          velocityValue: 0 -3 0;
+          maxAge: 2;
+          positionSpread: 6 0 6;">
         </a-entity>
 
         <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" color="#111"></a-plane>
