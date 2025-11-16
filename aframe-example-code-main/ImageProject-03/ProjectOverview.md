@@ -26,4 +26,4 @@
         - I made some quick edits by combining both photos. I used donnaroza image to have a musytical foreground scene with mushrooms. Then I changed the background to LazysAI image. 
 
 ### Video
-Don't forget you need a screen capture video of your VR world in a browser. 
+Don't forget you need a screen capture video of your VR world in a browser.
