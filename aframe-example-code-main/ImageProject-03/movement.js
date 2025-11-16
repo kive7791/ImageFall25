@@ -48,3 +48,11 @@ AFRAME.registerComponent('jump', {
     el.setAttribute('position', pos);
   }
 });
+
+AFRAME.registerComponent('log-collisions', {
+  init: function () {
+    this.el.addEventListener('collide', (e) => {
+      console.log('Collided with:', e.detail.body.el);
+    });
+  }
+});

@@ -9,8 +9,9 @@
   <script src="objects.js"></script>
 
   <!-- Physics system -->
-  <script
-    src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script>
+  <script src="https://unpkg.com/aframe-physics-system@4.0.1/dist/aframe-physics-system.min.js"></script>
+  <!-- <script
+    src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v$npm_package_version/dist/aframe-physics-system.min.js"></script> -->
 
   <!-- Movement Script -->
   <script src="movement.js"></script>
@@ -64,7 +65,7 @@
     <a-entity light="type: ambient; color: #e0f7ff; intensity: 0.6"></a-entity>
 
     <!-- Camera -->
-    <a-entity id="player" position="0 1 10" dynamic-body jump>
+    <a-entity id="player" position="0 1 10" dynamic-body jump log-collisions>
       <a-camera look-controls="true" wasd-controls="acceleration: 30"></a-camera>
     </a-entity>
 
