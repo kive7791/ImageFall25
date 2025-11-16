@@ -25,15 +25,16 @@
     <!-- Position: x-left/right, y-up/down, z-forward/backward -->
 
     <!-- Plane of exsitence -->
-     <!-- Standard Plane -->
+    <!-- Standard Plane -->
     <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#000000">
     </a-plane>
     <!-- After Stairs -->
-    <a-plane position="0 10 -10" rotation="-90 0 0" width="70" height="70" color="062e03">
+    <a-plane position="0 2 0" rotation="-90 0 0" width="70" height="70" color="062e03">
     </a-plane>
 
     <!-- Stairs -->
-     <a-box position="-1 0.5 -3" depth="2" height="4" width="0.5" rotation="0 45 0" scr="#StoneBottom"></a-box>
+    <a-box position="0 2.1 0.5" depth="2" height=".5" width="4" rotation="0 0 0" scr="#StoneTop"></a-box>
+    <a-box position="0 0.5 0" depth="2" height="2" width="4" rotation="0 0 0" scr="#StoneBottom"></a-box>
 
     <!-- Light Post -->
 
@@ -46,7 +47,7 @@
     <a-entity light="type: ambient; color: #e0f7ff; intensity: 0.6"></a-entity>
 
     <!-- Camera -->
-    <a-entity position="-25 0 15">
+    <a-entity position="0 0 15">
       <a-camera look-controls="true"></a-camera>
     </a-entity>
 
