@@ -2,7 +2,7 @@ AFRAME.registerComponent('jump', {
   schema: {
     speed:   {type: 'number', default: 5},      // Initial jump speed
     gravity: {type: 'number', default: -9.8},   // Gravity force
-    groundY: {type: 'number', default: 1.6}     // Standing height
+    groundY: {type: 'number', default: 1}     // Standing height
   },
 
   init: function () {

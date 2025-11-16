@@ -5,12 +5,15 @@
   <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 
+  <!-- Physics system -->
+  <script src="https://unpkg.com/aframe-physics-system@4.0.1/dist/aframe-physics-system.min.js"></script>
+
   <!-- Movement Script -->
   <script src="movement.js"></script>
 </head>
 
 <body>
-  <a-scene>
+  <a-scene physics="gravity: -9.8">
     <!-- Sky input -->
     <!-- a-assets pre-loads the images -->
     <a-assets>
@@ -29,28 +32,28 @@
 
     <!-- Planes of Exsitence -->
     <!-- Standard Plane -->
-    <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#000000">
+    <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#000000" static-body>
     </a-plane>
 
     <!-- Stairs -->
     <!-- 1 -->
-    <a-box position="0 1.5 0.1" depth="2.3" height=".5" width="3.95" rotation="0 0 0" src="#StoneTop"></a-box>
-    <a-box position="0 0.5 0" depth="2" height="2" width="4" rotation="0 0 0" src="#StoneBottom"></a-box>
+    <a-box position="0 1.5 0.1" depth="2.3" height=".5" width="3.95" rotation="0 0 0" src="#StoneTop" static-body></a-box>
+    <a-box position="0 0.5 0" depth="2" height="2" width="4" rotation="0 0 0" src="#StoneBottom" static-body></a-box>
     <!-- 2 -->
-    <a-box position="0 3.5 -1.7" depth="2.3" height=".5" width="3.95" rotation="0 0 0" src="#StoneTop"></a-box>
-    <a-box position="0 2.5 -1.8" depth="2" height="2" width="4" rotation="0 0 0" src="#StoneBottom"></a-box>
+    <a-box position="0 3.5 -1.7" depth="2.3" height=".5" width="3.95" rotation="0 0 0" src="#StoneTop" static-body></a-box>
+    <a-box position="0 2.5 -1.8" depth="2" height="2" width="4" rotation="0 0 0" src="#StoneBottom" static-body></a-box>
 
     <!-- Different Plane -->
     <!-- Tea Plane Left-->
-    <a-box position="-14.45 1.5 -10" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass"></a-box>
+    <a-box position="-14.45 1.42 -10" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass" static-body></a-box>
     <!-- Tea Plane Right -->
-    <a-box position="14.4 1.5 -10" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass"></a-box>
+    <a-box position="14.4 1.42 -10" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass" static-body></a-box>
     <!-- Tea Plane Back -->
-    <a-box position="0 1.5 -15.3" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass"></a-box>
+    <a-box position="0 1.42 -15.3" depth="25" height="5" width="25" rotation="0 0 0" src="#Grass" static-body></a-box>
 
     <!-- Light Post -->
     <!-- Base -->
-    <a-cone position="-5 6.6 -2.6" rotation="0 0 0" radius-bottom="2.5" radius-top="1" height="1" src="#Metal"></a-cone>
+    <a-cone position="-5 6.6 -2.6" rotation="0 0 0" radius-bottom="2.5" radius-top="1" height="1" src="#Metal" static-body></a-cone>
 
 
     <!-- Table -->
@@ -61,7 +64,7 @@
     <a-entity light="type: ambient; color: #e0f7ff; intensity: 0.6"></a-entity>
 
     <!-- Camera -->
-    <a-entity id="player" position="0 1 10" jump>
+    <a-entity id="player" position="0 1 10" kinematic-body jump>
       <a-camera look-controls="true" wasd-controls="acceleration: 30"></a-camera>
     </a-entity>
 
